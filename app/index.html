@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-text">
+    <p class="kicker">Grand Theft Auto VI · PlayStation 5 · Offline guide &amp; tracker</p>
+    <h1>Leonida Platinum</h1>
+    <p class="makeup">The official list: <strong>55 trophies</strong> — 1 platinum · 2 gold · 6 silver · 46 bronze · 28 hidden. Every trophy is offline; there are no online trophies.</p>
+  </div>
+  <div class="masthead-progress">
+    <p class="big-count"><span id="earned-count">0</span><span class="of"> of 55 earned</span></p>
+    <div class="bar" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progress-bar"><div class="bar-fill" id="progress-fill"></div></div>
+    <p class="pct" id="progress-pct">0% to the platinum</p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Views">
+  <button type="button" class="tab is-active" id="tab-checklist" data-view="checklist">Checklist</button>
+  <button type="button" class="tab" id="tab-roadmap" data-view="roadmap">Platinum roadmap</button>
+  <button type="button" class="tab" id="tab-missables" data-view="missables">Missables</button>
+</nav>
+
+<section class="toolbar" id="toolbar" aria-label="Filters">
+  <label class="field grow">Search
+    <input type="search" id="search" placeholder="Name, description or guide text…">
+  </label>
+  <label class="field">Grade
+    <select id="filter-grade">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="field">Kind
+    <select id="filter-kind">
+      <option value="all">All kinds</option>
+      <option value="story">Story</option>
+      <option value="strangers">Strangers &amp; side strands</option>
+      <option value="activities">Activities</option>
+      <option value="collectibles">Collectibles &amp; exploration</option>
+      <option value="crime">Crime &amp; free-roam feats</option>
+      <option value="misc">Secrets &amp; misc</option>
+      <option value="completion">Completion</option>
+      <option value="platinum">Platinum</option>
+    </select>
+  </label>
+  <label class="field">Status
+    <select id="filter-status">
+      <option value="all">All</option>
+      <option value="todo">Not earned</option>
+      <option value="done">Earned</option>
+    </select>
+  </label>
+  <label class="check"><input type="checkbox" id="filter-missable"> Missable only</label>
+  <label class="check"><input type="checkbox" id="spoilers" checked> Hide spoilers</label>
+  <div class="io">
+    <button type="button" id="export">Export progress</button>
+    <label class="import-btn">Import progress <input type="file" id="import" accept="application/json" hidden></label>
+    <button type="button" id="reset">Reset</button>
+  </div>
+</section>
+
+<main>
+  <section id="view-checklist" class="view">
+    <div class="layout">
+      <div class="list-wrap">
+        <p class="result-line" id="result-line"></p>
+        <ul class="trophy-list" id="trophy-list"></ul>
+      </div>
+      <aside class="detail" id="detail" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <div class="page">
+      <h2>Roadmap to the platinum</h2>
+      <p class="lede">Built from the official descriptions and the published roadmaps cited in each trophy's guide. One playthrough is enough — the game continues in free-roam after the final mission — but there is <strong>no mission replay</strong>, so keep manual saves at every chapter boundary (the game gives you 15 manual slots and one autosave). Never activate cheats on a trophy run: they disable trophies and saving.</p>
+      <div id="roadmap-stages"></div>
+      <h3>Before you start</h3>
+      <ul class="notes">
+        <li><strong>Saves:</strong> park a save at the start and end of each chapter, and rotate the spare slots while exploring. Your insurance for the one missable trophy hangs on a Chapter 1 save.</li>
+        <li><strong>The one missable:</strong> Positive Mental Attitude — accept Lucia's meditation invitation at Jason's house during Chapter 1 (see the Missables view).</li>
+        <li><strong>No difficulty setting</strong> and no gold-medal requirement on story missions: play the story at your own pace.</li>
+        <li><strong>Trackers:</strong> PlayStation tracks counts for the grind trophies (stunts, challenges, scans, money). Where a trophy's threshold is lower than the 100% checklist's, both are noted in its guide.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="view-missables" class="view" hidden>
+    <div class="page">
+      <h2>Missable trophies</h2>
+      <p class="lede">Checked against the official descriptions and the published guides cited below, exactly <strong>one</strong> of the 55 trophies can be permanently missed. Everything else stays available in free-roam, including after the final mission.</p>
+      <div id="missable-list"></div>
+      <h3>Why only one?</h3>
+      <p>The story trophies unlock automatically as missions end, the stranger strands and activities stay on the map, and the game continues after the credits — so nothing else can be locked away. The remaining risk is self-inflicted: the game has no mission replay, so chapter-boundary saves are still worth keeping, and cheats disable trophies and saving for the session.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Names, descriptions and grades are the official PlayStation list, as listed by Exophase and PSNProfiles. Guides are this app's own words and cite their sources per trophy. This is a fan-made tool: it uses no Rockstar Games logo, artwork or screenshots, and it works fully offline — progress is saved only in your browser.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
